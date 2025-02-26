@@ -1,0 +1,285 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #223243;
+}
+
+.top-nav {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.home-btn {
+    background: #ff7f50;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #ff5733;
+}
+
+.container {
+    padding: 35px;
+    border-radius: 20px;
+    border: 8px solid #223243;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35), 
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.container .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container .form h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.container .form .inputbox{
+    position: relative;
+    width: 300px;
+}
+
+.container .form .inputbox input, .inputbox select{
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    background: #223243;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #ffffff;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1rem;
+    box-shadow: -5px -5px 15px rgba(0,0,0,0.1);
+    color:#fff;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+}
+
+.container .form .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.7s;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.container .form .inputbox input:valid ~ span,
+.container .form .inputbox input:focus ~ span{
+color: aqua;
+border: 1px solid aqua;
+background: #223243;
+transform: translateX(25px) translateY(-7px);
+font-size: 0.9em;
+padding: 0.8px;
+border-radius: 10px;
+letter-spacing: 0.1em;
+}
+
+.container .form .inputbox input:valid,
+.container .form .inputbox input:focus{
+border: 1px solid aqua;
+}
+
+.container .form .inputbox i{
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    width: 20px;
+    padding: 2px 0;
+    padding-right: 5px;
+    color: aqua;
+    border-right: 1px solid aqua;
+}
+
+.container .form .inputbox input[type="submit"]{
+    background: aqua;
+    color: #223243;
+    padding: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35), 
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient effect */
+    color: #fff;
+    border: none;
+    padding: 12px 20px; /* Increased padding for better look */
+    width: 100%;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 4px 10px rgba(0, 91, 187, 0.3); /* Subtle shadow */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #b34200, #02ffab); /* Darker gradient */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 91, 187, 0.5); /* Stronger shadow on hover */
+}
+
+.btn:active {
+    transform: translateY(1px); /* Slight press effect */
+    box-shadow: 0 2px 5px rgba(0, 91, 187, 0.2);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #1db954; /* Green shade */
+    cursor: pointer;
+}
+
+/* Label and Link Styling */
+label {
+    font-size: 16px;
+}
+
+a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Terms & Conditions Link */
+a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /* Center the modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* "Login as Coordinator" Heading */
+.login-coordinator a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.login-coordinator a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .top-nav {
+        right: 10px;
+    }
+    .home-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

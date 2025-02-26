@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport settings -->
+
+    <meta name="description" content=""> <!-- Meta description for SEO -->
+    <meta name="author" content=""> <!-- Author of the document -->
+
+    <title>Incognito24-2025</title>
+
+    <!-- CSS FILES -->
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts for typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&family=Rajdhani:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to external CSS files with relative paths -->
+    <link href="C:\colleg\Incognito _main\CSS\bootstrap.min.css" rel="stylesheet">
+
+    <link href="C:\colleg\Incognito _main\CSS\bootstrap-icons.css" rel="stylesheet">
+
+    <link href="C:\colleg\Incognito _main\index.css" rel="stylesheet">
+
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: #000;
+            /* Example: Dark Background */
+            color: #fff;
+        }
+
+        /* Countdown Styles */
+        #countdown {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-top: 20px;
+        }
+
+        #countdown span {
+            padding: 0 10px;
+            font-weight: bolder;
+        }
+
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Increased min width */
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 1000%;
+            height: 200px;
+            /* Set a fixed height for images */
+            object-fit: cover;
+            /* Maintain aspect ratio and cover the area */
+            display: block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 15px;
+            /* Curved image corners */
+        }
+
+        /* Hover Effects */
+        .gallery-item img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+        .gallery-item img {
+            height: 300px;
+            /* Adjust the height as needed */
+            width: 100;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            /* Ensure images don't get stretched */
+        }
+
+        #gallery-section {
+            padding: 0px 0;
+            /* Reduce top and bottom padding */
+        }
+
+        .gallery-item {
+            margin: 0;
+            /* Remove extra margins */
+            padding: 0;
+            /* Remove padding */
+        }
+
+
+        /* Additional Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Apply Fade-In Animation */
+        .gallery-item {
+            animation: fadeIn 1s ease-in-out;
+            transition: transform 0.5s ease-in-out;
+            /* Smooth transition for rotation */
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            /* Example: Adjust padding, background, etc. */
+            padding: 100px 0;
+            /* Add some vertical padding */
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            /* Example: make the heading larger */
+        }
+
+        /* About Section Styling */
+        .about-section {
+            background-color: #000;
+            /* Example: Dark background */
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .about-section h2,
+        .about-section h3 {
+            color: #ffcc00;
+            /* Example: Yellow headings */
+        }
+
+        .about-section p {
+            line-height: 1.6;
+        }
+
+        /* Example: Style the navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            /* Make sure the brand is white */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            /* White links */
+            margin: 0 15px;
+            /* Add some spacing between links */
+        }
+
+        h2,
+        h3 {
+            color: #00fff2;
+            /* Yellow headings */
+        }
+
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 16px;
+            }
+        }
+
+        /* Image Styling */
+        .about-image {
+            width: 500px;
+            /* Fixed width */
+            height: 500px;
+            /* Fixed height */
+            border-radius: 20px;
+            /* Rounded corners */
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            /* Smooth hover effect */
+            box-shadow: 0px 4px 10px rgba(255, 111, 0, 0.5);
+            /* Soft orange shadow */
+        }
+
+        /* Hover Effect */
+        .about-image:hover {
+            transform: scale(1.1) rotate(360deg);
+            /* Slight enlargement & rotation */
+            box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.7);
+            /* Brighter glow on hover */
+            opacity: 0.9;
+            /* Slight fade effect */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Header Section -->
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-person custom-icon me-2"></i>
+                            <strong class="text-dark">Welcome to Incognito 24-2025</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="C:\colleg\Incognito _main\images\incognito logo.png" alt="Incognito logo" width="70">
+                </a>
+
+                <!-- Register button for mobile -->
+                <a href="C:\colleg\Incognito _main\Register Page\Register.html"
+                    class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
+
+                <!-- Navbar toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#about.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"
+                                href="C:\colleg\Incognito _main\About Page\about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Broucher</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll"
+                                href="C:\colleg\Incognito _main\Team Page\Team.html">Team</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="C:\colleg\Incognito _main\Gallery Page\Gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+
+                    <!-- Register button for desktop -->
+                    <a href="C:\colleg\Incognito _main\Register Page\Register.html"
+                        class="btn custom-btn d-lg-block d-none">Register</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="section_1">
+            <div class="section-overlay"></div>
+
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="row">
+
+                    <div class="col-12 mt-auto mb-5 text-center">
+                        <small>Get Set Go Incognito</small>
+
+                        <h1 class="text-white mb-5">The Art of Hidden Tech</h1>
+
+                        <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
+                    </div>
+
+                    <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                        <div class="date-wrap">
+                            <h5 class="text-white">
+                                <i class="custom-icon bi-clock me-2"></i>
+                                26<sup>th</sup>, Mar 2025
+                            </h5>
+                        </div>
+
+                        <div class="location-wrap mx-auto py-3 py-lg-0">
+                            <h5 class="text-white">
+                                <i class="custom-icon bi-geo-alt me-2"></i>
+                                Seshadripurm college , Bengaluru-20
+                            </h5>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon d-flex align-items-center justify-content-center">
+                                <span class="text-white me-3">Follow us on:</span>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.facebook.com/profile.php?id=61559047771935&mibextid=ZbWKwL"
+                                        class="social-icon-link">
+                                        <span class="bi-facebook"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.youtube.com/@mca_seshadripuram_main" class="social-icon-link">
+                                        <span class="bi-youtube"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.instagram.com/sdc_mca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                        class="social-icon-link">
+                                        <span class="bi-instagram"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <source src="C:\colleg\Incognito _main\video\pexels-2022395.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section section-padding" id="section_countdown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 text-center">
+                        <h2 class="text-yellow mb-4">Event Starts In</h2>
+                        <div id="countdown">
+                            <span>00</span> :
+                            <span>00</span> :
+                            <span>00</span> :
+                            <span>00</span> :
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const now = new Date();
+                let eventDate = new Date(now.getFullYear(), 2, 26, 0, 0, 0); // March is month index 2 (0-based index)
+
+                // If today is already March 26 or later in the year, set the event for next year
+                if (now > eventDate) {
+                    eventDate = new Date(now.getFullYear() + 1, 2, 26, 0, 0, 0);
+                }
+
+                function updateCountdown() {
+                    const timeLeft = eventDate.getTime() - new Date().getTime();
+
+                    if (timeLeft <= 0) {
+                        document.getElementById("countdown").innerHTML = "Event Started!";
+                        return;
+                    }
+
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                    document.getElementById("countdown").innerHTML = `
+            <span>${String(days).padStart(2, '0')}</span> DAYS :
+            <span>${String(hours).padStart(2, '0')}</span> HRS :
+            <span>${String(minutes).padStart(2, '0')}</span> MIN :
+            <span>${String(seconds).padStart(2, '0')}</span> SEC
+        `;
+                }
+
+                updateCountdown(); // Initial call to prevent delay
+                setInterval(updateCountdown, 1000);
+            });
+
+        </script>
+
+        <!-- About Section -->
+        <section class="about-section section-padding" id="about-incognito">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="text-blue mb-4">About Incognito</h2>
+                        <p class="text-white">Welcome to Incognito</p>
+                        <p class="text-white">
+                            Incognito is the annual inter-collegiate IT Fest organised by The Department of Computer
+                            Science
+                            and Post Graduate Department of Computer Applications.
+                        </p>
+                        <p class="text-white">
+                            Incognito is more than just an event—it’s a movement towards hands-on learning and
+                            innovation.
+                            Our goal is to challenge participants with real-world tech problems, sparking creativity and
+                            a competitive edge. From coding challenges to groundbreaking projects, this event is a
+                            platform
+                            for young minds to showcase their skills, collaborate, and push the boundaries of
+                            technology.
+                            Join us in this exciting journey of discovery, growth, and innovation. Let’s make this
+                            year’s
+                            Incognito an experience to remember!
+                        </p>
+                        <div class="text-center">
+                            <img src="C:\colleg\Incognito _main\images\i.jpg" alt="Event Logo"
+                                class="about-image img-fluid d-block mx-auto mt-4" width="500" height="500">
+                        </div>
+
+
+                        <div class="ms-4">
+                            <h3 style="margin-top: 30px;">Ctrl + Alt + Innovate</h3>
+
+                            <p class="mb-0">Where Logic Meets Creativity!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section section-padding" id="section_7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-white mb-4">Gallery</h2>
+                        <p class="text-white">A glimpse of our past events and experiences.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\ing.JPG" alt="Gallery Image 1"
+                            class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\cup.JPG" alt="Gallery Image 2"
+                            class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\dance.JPG"
+                            alt="Gallery Image 3" class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\dance2.JPG"
+                            alt="Gallery Image 4" class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\swa.JPG" alt="Gallery Image 5"
+                            class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\fash.JPG" alt="Gallery Image 6"
+                            class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\sacrry.jpg"
+                            alt="Gallery Image 7" class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\dance3.JPG"
+                            alt="Gallery Image 8" class="img-fluid"></div>
+                    <div class="gallery-item"><img src="C:\colleg\Incognito _main\images\song.JPG" alt="Gallery Image 9"
+                            class="img-fluid"></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="C:\colleg\Incognito _main\Gallery Page\Gallery.html"
+                    class="btn custom-btn d-lg-none ms-auto me-4">Read More</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section-->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="container">
+                <div class="inner-footer">
+                    <div class="footer-main">
+                        <div class="footer-brand-main">
+                            <div class="footer-brand">
+                                <a href="index"><img
+                                        src="C:\colleg\Incognito _main\images\Seshadripuram college logo.png"
+                                        alt="seshadripuram logo." aria-label="footer-logo" loading="lazy"></a>
+                                <div>
+                                    <h2>Seshadripuram College</h2>
+                                    <p>Seshadripuram, Bengaluru</p>
+                                </div>
+                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7315173726784!2d77.57420781482215!3d12.989016390844414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163d56b849af%3A0xc26416da3a825777!2sSeshadripuram%20College!5e0!3m2!1sen!2sin!4v1656066508635!5m2!1sen!2sin"
+                                title="map"></iframe>
+                        </div>
+                        <div class="footer-link">
+                            <h3>Quick Links</h3>
+                            <hr>
+                            <div class="footer-link-all">
+                                <ul>
+                                    <li><a href="iqac">About</a></li>
+                                    <li><a href="admission-procedure">Events</a></li>
+                                    <li><a href="curriculum">Schedule</a></li>
+                                    <li><a href="photo-gallery-main">Photo Gallery</a></li>
+                                    <li><a href="latest-news-main">Broucher</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-link">
+                            <h3>Follow us on</h3>
+                            <hr>
+                            <ul class="social-links-footer">
+                                <li><a href="https://www.instagram.com/sdc_mca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                        target="_blank" class="instagram" aria-label="instagram" title="Instagram"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61559047771935&mibextid=ZbWKwL"
+                                        target="_blank" class="facebook" aria-label="facebook"><i
+                                            class="fa-brands fa-facebook-f" title="Facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/@mca_seshadripuram_main" target="_blank"
+                                        class="youtube" aria-label="youtube"><i class="fa-brands fa-youtube"
+                                            title="Youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copy-wrapper">
+            <div class="container">
+                <div class="copyrights">
+                    <span>Website Designed & Developed by : <a href="C:\colleg\Incognito _main\Team Page\Team.html"
+                            target="_blank">
+                            Team</a></span><br><br>
+                    <p>Copyright © <span id="current-year">2025</span>, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

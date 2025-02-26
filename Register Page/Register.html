@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="C:\colleg\Incognito _main\Register Page\Register.css">
+</head>
+
+<body>
+    <!-- Home Button on Top Right -->
+    <div class="top-nav"> <a href="index.html" class="home-btn">Home</a> </div>
+
+    <div class="container">
+        <form class="form" id="registerForm">
+            <h2>Event Registration</h2>
+            <div class="inputbox">
+                <input type="text" id="teamname" required>
+                <span>Team Name</span>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" id="username" required>
+                <span>Participant name</span>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" id="phno" required>
+                <span>Phone Number</span>
+            </div>
+
+            <div class="inputbox">
+                <input type="email" id="emailid" required>
+                <span>Email ID</span>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" id="collegename" required>
+                <span>College Name</span>
+            </div>
+
+            <div class="inputbox">
+                <select id="eventList" required>
+                    <option value="">Select Event</option>
+                    <option value="IT Quiz">IT Quiz</option>
+                    <option value="Coding">Coding & Debugging</option>
+                    <option value="IT Dumb Chardes">IT Dumb Charades</option>
+                    <option value="IT Techmaster">IT Techmaster</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="IOT Models">IOT Modelling</option>
+                    <option value="BGMI">BGMI - Gaming</option>
+                    <option value="Talent Show">Talent Show</option>
+                    <option value="Talent Show">Fashion show</option>
+                    <option value="Videography">Videography</option>
+                    <option value="Treasure Hunt">Treasure Hunt</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="checkbox" id="termscheckbox" required>
+                <label for="termscheckbox">I agree to the <a href="#">Terms & Conditions</a></label>
+            </div>
+
+            <!-- Terms & Conditions Modal -->
+            <div id="termsmodal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Terms & Conditions</h3><br>
+                    <ol>
+                        <li>Online registration is for reservation only. Final registration is confirmed by paying fees
+                            on the event day.</li><br>
+                        <li>On-spot registration requires payment on the fest day for participation. Registration is
+                            confirmed only after payment.</li><br>
+                        <li>Team event registration needs one participant's name online; all team members must be
+                            present for on-spot registration.</li><br>
+                        <li>Organizers hold authority to dismiss any registration.</li><br>
+                        <li>Contact coordinators for further information.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <button type="submit" class="btn" value="Register">Register</button>
+            </div>
+
+            <!-- New Heading Below Button -->
+            <div class="login-coordinator">
+                <a href="C:\colleg\Incognito _main\Login Page\Login.html">Login as Coordinator</a>
+            </div>
+        </form>
+    </div>
+
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDt8_OUKqnzhOo_107UEJ23uIB50ydB2to",
+            authDomain: "incognito-13104.firebaseapp.com",
+            databaseURL: "https://incognito-13104-default-rtdb.firebaseio.com/",
+            projectId: "incognito-13104",
+            storageBucket: "incognito-13104.appspot.com",
+            messagingSenderId: "508309575287",
+            appId: "1:508309575287:web:89fce1ea39f8aa8692d872",
+            measurementId: "G-K37RK5DB60"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // WhatsApp Group Links
+        const eventLinks = {
+            "IT Quiz": "https://chat.whatsapp.com/C2kLCRJJnscFHJ856eHH8x",
+            "Coding": "https://chat.whatsapp.com/your-coding-group-link",
+            "IT Dumb Chardes": "https://chat.whatsapp.com/your-dumb-charades-group-link",
+            "IT Techmaster": "https://chat.whatsapp.com/your-techmaster-group-link",
+            "Web Design": "https://chat.whatsapp.com/your-web-design-group-link",
+            "IOT Models": "https://chat.whatsapp.com/your-iot-models-group-link",
+            "BGMI": "https://chat.whatsapp.com/your-bgmi-group-link",
+            "Talent Show": "https://chat.whatsapp.com/your-talent-show-group-link",
+            "Videography": "https://chat.whatsapp.com/your-videography-group-link",
+            "Treasure Hunt": "https://chat.whatsapp.com/your-treasure-hunt-group-link"
+        };
+
+        // Handle Form Submission
+        document.getElementById("registerForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            // Get Form Values
+            var teamName = document.getElementById("teamname").value.trim();
+            var userName = document.getElementById("username").value.trim();
+            var phoneNumber = document.getElementById("phno").value.trim();
+            var emailId = document.getElementById("emailid").value.trim();
+            var collegeName = document.getElementById("collegename").value.trim();
+            var selectedEvent = document.getElementById("eventList").value;
+            var termsAccepted = document.getElementById("termscheckbox").checked;
+
+            let isValid = true;
+
+            // Validation
+            if (!teamName) {
+                alert("Team Name is required.");
+                isValid = false;
+            }
+            if (!userName) {
+                alert("Username is required.");
+                isValid = false;
+            }
+            if (!phoneNumber.match(/^\d{10}$/)) {
+                alert("Enter a valid 10-digit phone number.");
+                isValid = false;
+            }
+            if (!emailId.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                alert("Enter a valid email.");
+                isValid = false;
+            }
+            if (!collegeName) {
+                alert("College Name is required.");
+                isValid = false;
+            }
+            if (!selectedEvent) {
+                alert("Please select an event.");
+                isValid = false;
+            }
+            if (!termsAccepted) {
+                alert("You must agree to the Terms & Conditions.");
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Store data in Firebase
+            await push(ref(database, "event_registrations"), {
+                teamName,
+                userName,
+                phoneNumber,
+                emailId,
+                collegeName,
+                selectedEvent
+            });
+
+            // Get WhatsApp Link
+            const whatsappLink = eventLinks[selectedEvent];
+
+            // Show Thank You Message and Redirect
+            alert(`Thank you for registering for ${selectedEvent}! \nYou will be redirected to the WhatsApp group.`);
+            window.location.href = whatsappLink;
+
+            // Reset the form
+            document.getElementById("registerForm").reset();
+        });
+
+        // Handle Terms & Conditions Modal
+        var modal = document.getElementById("termsmodal");
+        var closeModal = document.getElementsByClassName("close")[0];
+
+        document.querySelector("label[for='termscheckbox'] a").addEventListener("click", function (event) {
+            event.preventDefault();
+            modal.style.display = "flex";
+        });
+
+        closeModal.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
