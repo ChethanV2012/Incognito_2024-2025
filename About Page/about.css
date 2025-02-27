@@ -2,54 +2,54 @@
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-    --white-color: #ffffff;
-    --primary-color: #F8CB2E;
-    --secondary-color: #EE5007;
-    --section-bg-color: #f0f8ff;
-    --custom-btn-bg-color: #EE5007;
-    --custom-btn-bg-hover-color: #c01f27;
-    --dark-color: #000000;
-    --p-color: #717275;
-    --border-color: #7fffd4;
-    --link-hover-color: #B22727;
+  --white-color: #ffffff;
+  --primary-color: #F8CB2E;
+  --secondary-color: #EE5007;
+  --section-bg-color: #f0f8ff;
+  --custom-btn-bg-color: #EE5007;
+  --custom-btn-bg-hover-color: #c01f27;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #B22727;
 
-    --body-font-family: 'Outfit', sans-serif;
+  --body-font-family: 'Outfit', sans-serif;
 
-    --h1-font-size: 74px;
-    --h2-font-size: 46px;
-    --h3-font-size: 32px;
-    --h4-font-size: 28px;
-    --h5-font-size: 24px;
-    --h6-font-size: 22px;
-    --p-font-size: 18px;
-    --btn-font-size: 14px;
-    --copyright-font-size: 16px;
+  --h1-font-size: 74px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --btn-font-size: 14px;
+  --copyright-font-size: 16px;
 
-    --border-radius-large: 100px;
-    --border-radius-medium: 20px;
-    --border-radius-small: 10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 
 body {
-    background-color: var(--dark-color);
-    font-family: var(--body-font-family);
+  background-color: var(--white-color);
+  font-family: var(--body-font-family);
 }
 
 
 /*---------------------------------------
-    TYPOGRAPHY               
-  -----------------------------------------*/
+  TYPOGRAPHY               
+-----------------------------------------*/
 
 h2,
 h3,
 h4,
 h5,
 h6 {
-    color: var(--dark-color);
+  color: var(--dark-color);
 }
 
 h1,
@@ -58,295 +58,407 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 h1 {
-    font-size: var(--h1-font-size);
+  font-size: var(--h1-font-size);
 }
 
 h2 {
-    font-size: var(--h2-font-size);
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-    font-size: var(--h3-font-size);
+  font-size: var(--h3-font-size);
 }
 
 h4 {
-    font-size: var(--h4-font-size);
+  font-size: var(--h4-font-size);
 }
 
 h5 {
-    font-size: var(--h5-font-size);
+  font-size: var(--h5-font-size);
 }
 
 h6 {
-    font-size: var(--h6-font-size);
+  font-size: var(--h6-font-size);
 }
 
 p {
-    color: var(--p-color);
-    font-size: var(--p-font-size);
-    font-weight: var(--font-weight-light);
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
 }
 
 ul li {
-    color: var(--p-color);
-    font-size: var(--p-font-size);
-    font-weight: var(--font-weight-light);
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
 }
 
 a,
 button {
-    touch-action: manipulation;
-    transition: all 0.3s;
+  touch-action: manipulation;
+  transition: all 0.3s;
 }
 
 a {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--link-hover-color);
+  color: var(--link-hover-color);
 }
 
 b,
 strong {
-    font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+
+.link-fx-1 {
+  color: var(--white-color);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 6px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.link-fx-1:hover {
+  color: var(--link-hover-color);
+}
+
+.link-fx-1:hover::before {
+  transform: translateX(17px) scaleX(0);
+  transition: transform .2s;
+}
+
+.link-fx-1:hover .icon circle {
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset .2s .1s;
+}
+
+.link-fx-1:hover .icon line {
+  transform: rotate(-180deg);
+}
+
+.link-fx-1:hover .icon line:last-child {
+  transform: rotate(180deg);
+}
+
+.link-fx-1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: right center;
+  transition: transform .2s .1s;
+}
+
+.link-fx-1 .icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%) rotate(90deg);
+  font-size: 32px;
 }
 
 .icon {
-    --size: 1em;
-    height: var(--size);
-    width: var(--size);
-    display: inline-block;
-    color: inherit;
-    fill: currentColor;
-    line-height: 1;
-    flex-shrink: 0;
-    max-width: initial;
+  --size: 1em;
+  height: var(--size);
+  width: var(--size);
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.link-fx-1 .icon circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset .2s;
+}
+
+.link-fx-1 .icon line {
+  transition: transform .4s;
+  transform-origin: 13px 15px;
+}
+
+.link-fx-1 .icon line:last-child {
+  transform-origin: 19px 15px;
 }
 
 
 /*---------------------------------------
-    NAVIGATION BAR & SECTION               
-  -----------------------------------------*/
+  NAVIGATION BAR & SECTION               
+-----------------------------------------*/
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-bg {
+  background-color: var(--section-bg-color);
+}
+
+.section-overlay {
+  background-color: var(--dark-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.section-overlay+.container {
+  position: relative;
+}
+
+.tab-content {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 45px;
+}
 
 .nav-tabs {
-    background-color: var(--section-bg-color);
-    border-radius: var(--border-radius-large);
-    border-bottom: 0;
-    padding: 15px;
+  background-color: var(--section-bg-color);
+  border-radius: var(--border-radius-large);
+  border-bottom: 0;
+  padding: 15px;
 }
 
 .nav-tabs .nav-link {
-    border-radius: var(--border-radius-large);
-    border: 0;
-    padding: 15px 25px;
-    transition: all 0.3s;
+  border-radius: var(--border-radius-large);
+  border: 0;
+  padding: 15px 25px;
+  transition: all 0.3s;
 }
 
 .nav-tabs .nav-link:first-child {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
-    background: var(--white-color);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
-    color: var(--primary-color);
+  background: var(--white-color);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  color: var(--primary-color);
 }
 
 .nav-tabs h5 {
-    color: var(--p-color);
-    margin-bottom: 0;
+  color: var(--p-color);
+  margin-bottom: 0;
 }
 
 .nav-tabs .nav-link.active h5,
 .nav-tabs .nav-link:focus h5,
 .nav-tabs .nav-link:hover h5 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 
 /*---------------------------------------
-    CUSTOM ICON COLOR               
-  -----------------------------------------*/
+  CUSTOM ICON COLOR               
+-----------------------------------------*/
 .custom-icon {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 
 /*---------------------------------------
-    CUSTOM BUTTON               
-  -----------------------------------------*/
+  CUSTOM BUTTON               
+-----------------------------------------*/
 .custom-btn {
-    background: var(--custom-btn-bg-color);
-    border: 2px solid transparent;
-    border-radius: var(--border-radius-large);
-    color: var(--white-color);
-    font-size: var(--btn-font-size);
-    font-weight: var(--font-weight-bold);
-    line-height: normal;
-    transition: all 0.3s;
-    padding: 10px 20px;
+  background: var(--custom-btn-bg-color);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
 }
 
 .custom-btn:hover {
-    background: var(--custom-btn-bg-hover-color);
-    color: var(--white-color);
+  background: var(--custom-btn-bg-hover-color);
+  color: var(--white-color);
 }
 
 .custom-border-btn {
-    background: transparent;
-    border: 2px solid var(--custom-btn-bg-color);
-    color: var(--custom-btn-bg-color);
+  background: transparent;
+  border: 2px solid var(--custom-btn-bg-color);
+  color: var(--custom-btn-bg-color);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover,
 .custom-border-btn:hover {
-    background: var(--custom-btn-bg-hover-color);
-    border-color: transparent;
-    color: var(--white-color);
+  background: var(--custom-btn-bg-hover-color);
+  border-color: transparent;
+  color: var(--white-color);
 }
 
 .custom-btn-bg-white {
-    border-color: var(--white-color);
-    color: var(--white-color);
+  border-color: var(--white-color);
+  color: var(--white-color);
 }
 
 
+/*---------------------------------------
+  VIDEO              
+-----------------------------------------*/
+.video-wrap {
+  z-index: -100;
+}
+
+.custom-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 
 /*---------------------------------------
-    SITE HEADER              
-  -----------------------------------------*/
+  SITE HEADER              
+-----------------------------------------*/
 .site-header {
-    background-color: var(--primary-color);
-    padding-top: 12px;
-    padding-bottom: 12px;
+  background-color: var(--primary-color);
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 
 /*---------------------------------------
-    NAVIGATION              
-  -----------------------------------------*/
+  NAVIGATION              
+-----------------------------------------*/
 .sticky-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin-top: 51px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-top: 51px;
 }
 
 .sticky-wrapper.is-sticky .navbar {
-    background-color: var(--dark-color);
+  background-color: var(--dark-color);
 }
 
 .navbar {
-    background: transparent;
-    z-index: 9;
+  background: transparent;
+  z-index: 9;
 }
 
 .navbar-brand,
 .navbar-brand:hover {
-    color: var(--white-color);
-    font-size: var(--h5-font-size);
-    font-weight: var(--font-weight-bold);
+  color: var(--white-color);
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-bold);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    border-radius: var(--border-radius-large);
-    margin: 10px;
-    padding: 10px 20px;
+  border-radius: var(--border-radius-large);
+  margin: 10px;
+  padding: 10px 20px;
 }
 
 .navbar-nav .nav-link {
-    display: inline-block;
-    color: var(--white-color);
-    font-size: var(--p-font-size);
-    font-weight: var(--font-weight-normal);
-    position: relative;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  display: inline-block;
+  color: var(--white-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .navbar-toggler {
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    margin: 0;
-    width: 30px;
-    height: 35px;
-    outline: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+  width: 30px;
+  height: 35px;
+  outline: none;
 }
 
 .navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background: transparent;
+  background: transparent;
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-    transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
-    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-    transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
-    top: 0;
+  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  top: 0;
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .navbar-toggler .navbar-toggler-icon {
-    background: var(--white-color);
-    transition: background 10ms 300ms ease;
-    display: block;
-    width: 30px;
-    height: 2px;
-    position: relative;
+  background: var(--white-color);
+  transition: background 10ms 300ms ease;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: relative;
 }
 
 .navbar-toggler .navbar-toggler-icon:before,
 .navbar-toggler .navbar-toggler-icon:after {
-    transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
-    transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-    transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
-    position: absolute;
-    right: 0;
-    left: 0;
-    background: var(--white-color);
-    width: 30px;
-    height: 2px;
-    content: '';
+  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: var(--white-color);
+  width: 30px;
+  height: 2px;
+  content: '';
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
-    top: -8px;
+  top: -8px;
 }
 
 .navbar-toggler .navbar-toggler-icon::after {
-    top: 8px;
+  top: 8px;
 }
-
 
 
 /*---------------------------------------
