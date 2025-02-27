@@ -1,1 +1,246 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport settings -->
+
+    <meta name="description" content=""> <!-- Meta description for SEO -->
+    <meta name="author" content=""> <!-- Author of the document -->
+
+    <title>Incognito 2024-2025</title>
+    <link rel="icon" type="image/x-icon" href="images/incognito logo.png">
+
+    <!-- CSS FILES -->
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts for typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&family=Rajdhani:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to external CSS files with relative paths -->
+    <link href="CSS/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+
+    <link href="index.css" rel="stylesheet">
+
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+     
+        /* Example: Style the navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            /* Make sure the brand is white */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            /* White links */
+            margin: 0 15px;
+            /* Add some spacing between links */
+        }
+
+        h2,
+        h3 {
+            color: #00fff2;
+            /* Yellow headings */
+        }
+
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 15px;
+            }
+        }
+
+        /* Image Styling */
+        .about-image {
+            width: 500px;
+            /* Fixed width */
+            height: 500px;
+            /* Fixed height */
+            border-radius: 20px;
+            /* Rounded corners */
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            /* Smooth hover effect */
+            box-shadow: 0px 4px 10px rgba(255, 111, 0, 0.5);
+            /* Soft orange shadow */
+        }
+
+        /* Hover Effect */
+        .about-image:hover {
+            transform: scale(1.1) rotate(360deg);
+            /* Slight enlargement & rotation */
+            box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.7);
+            /* Brighter glow on hover */
+            opacity: 0.9;
+            /* Slight fade effect */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Header Section -->
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-person custom-icon me-2"></i>
+                            <strong class="text-dark">Welcome to Incognito 2024-2025</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/incognito logo.png" alt="Incognito logo" width="70">
+                </a>
+
+                <!-- Register button for mobile -->
+                <a href="Register Page/Register.html"
+                    class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
+
+                <!-- Navbar toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="About Page/about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Events Page/event.html">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Schedule Page/schedule.html">Schedule</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Broucher Page/Broucher.html">Broucher</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Team Page/Team.html">Team</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Gallery Page/Gallery.html">Gallery</a>
+                        </li>
+                    </ul>
+
+                    <!-- Register button for desktop -->
+                    <a href="Register Page/Register.html"
+                        class="btn custom-btn d-lg-block d-none">Register</a>
+                </div>
+            </div>
+        </nav>
+      
+    </main>
+
+    <!-- Footer Section-->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="container">
+                <div class="inner-footer">
+                    <div class="footer-main">
+                        <div class="footer-brand-main">
+                            <div class="footer-brand">
+                                <a href="index"><img src="images/Seshadripuram college logo.png" target="_blank" 
+                                        alt="seshadripuram logo" aria-label="footer-logo" loading="lazy"></a>
+                                <div>
+                                    <h2>Seshadripuram College</h2>
+                                    <p>Seshadripuram, Bengaluru</p>
+                                </div>
+                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7315173726784!2d77.57420781482215!3d12.989016390844414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae163d56b849af%3A0xc26416da3a825777!2sSeshadripuram%20College!5e0!3m2!1sen!2sin!4v1656066508635!5m2!1sen!2sin"
+                                title="map"></iframe>
+                        </div>
+                        <div class="footer-link">
+                            <h3>Quick Links</h3>
+                            <hr>
+                            <div class="footer-link-all">
+                                <ul>
+                                    <li><a href="About Page/about.html">About</a></li>
+                                    <li><a href="Events Page/event.html">Events</a></li>
+                                    <li><a href="Schedule Page/schedule.html">Schedule</a></li>
+                                    <li><a href="Gallery Page/Gallery.html">Photo Gallery</a></li>
+                                    <li><a href="Broucher Page/Broucher.html">Broucher</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-link">
+                            <h3>Follow us on</h3>
+                            <hr>
+                            <ul class="social-links-footer">
+                                <li><a href="https://www.instagram.com/sdc_mca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                        target="_blank" class="instagram" aria-label="instagram" title="Instagram"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61559047771935&mibextid=ZbWKwL"
+                                        target="_blank" class="facebook" aria-label="facebook"><i
+                                            class="fa-brands fa-facebook-f" title="Facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/@mca_seshadripuram_main" target="_blank"
+                                        class="youtube" aria-label="youtube"><i class="fa-brands fa-youtube"
+                                            title="Youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copy-wrapper">
+            <div class="container">
+                <div class="copyrights">
+                    <span>Website Designed & Developed by : <a href="Team Page/Team.html" target="_blank">
+                            Team</a></span><br><br>
+                    <p>Copyright © <span id="current-year">2025</span>, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
