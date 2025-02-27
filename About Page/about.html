@@ -27,13 +27,20 @@
         rel="stylesheet">
 
     <!-- Link to external CSS files with relative paths -->
-    <link href="CSS/bootstrap.min.css" rel="stylesheet">
-
     <link href="CSS/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
     <link href="about.css" rel="stylesheet">
 
     <style>
+        /* General Body Styling */
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+     
+        /* Example: Style the navbar */
         .navbar {
             background-color: rgba(0, 0, 0, 0.7);
             /* Semi-transparent background */
@@ -44,10 +51,19 @@
             /* Make sure the brand is white */
         }
 
-        .footer-link h3 {
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            /* White links */
+            margin: 0 15px;
+            /* Add some spacing between links */
+        }
+
+        .container1 h3 {
             color: #00fff2;
             /* Yellow headings */
         }
+
+
     </style>
 </head>
 
@@ -76,7 +92,8 @@
                 </a>
 
                 <!-- Register button for mobile -->
-                <a href="Register Page/Register.html" class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
+                <a href="Register Page/Register.html"
+                    class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
 
                 <!-- Navbar toggle button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -88,6 +105,10 @@
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="About Page/about.html">About</a>
                         </li>
 
                         <li class="nav-item">
@@ -112,11 +133,13 @@
                     </ul>
 
                     <!-- Register button for desktop -->
-                    <a href="Register Page/Register.html" class="btn custom-btn d-lg-block d-none">Register</a>
+                    <a href="Register Page/Register.html"
+                        class="btn custom-btn d-lg-block d-none">Register</a>
                 </div>
             </div>
         </nav>
-
+      
+ 
         <div class="container1">
             <h1>About Us</h1>
             <p class="about-intro">Incognito is the annual inter-collegiate IT Fest organised by The Department of
@@ -149,7 +172,7 @@
                 courses which equip students to face current industry requirements.</p>
             <br>
         </div>
-    </main>
+     </main>
 
     <!-- Footer Section-->
     <footer>
@@ -159,9 +182,8 @@
                     <div class="footer-main">
                         <div class="footer-brand-main">
                             <div class="footer-brand">
-                                <a href="https://www.spmcollege.ac.in/" target="_blank">
-                                    <img src=" images\Seshadripuram college logo.png" alt="seshadripuram logo"
-                                        aria-label="footer-logo" loading="lazy"></a>
+                                <a href="index"><img src="images/Seshadripuram college logo.png" target="_blank" 
+                                        alt="seshadripuram logo" aria-label="footer-logo" loading="lazy"></a>
                                 <div>
                                     <h2>Seshadripuram College</h2>
                                     <p>Seshadripuram, Bengaluru</p>
@@ -207,7 +229,7 @@
         <div class="copy-wrapper">
             <div class="container">
                 <div class="copyrights">
-                    <span>Website Designed & Developed by : <a href="Team Page\Team.html" target="_blank">
+                    <span>Website Designed & Developed by : <a href="Team Page/Team.html" target="_blank">
                             Team</a></span><br><br>
                     <p>Copyright © <span id="current-year">2025</span>, All Rights Reserved</p>
                 </div>
@@ -223,5 +245,4 @@
     <script src="js/custom.js"></script>
 
 </body>
-
 </html>
