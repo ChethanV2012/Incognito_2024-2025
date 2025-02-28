@@ -837,3 +837,43 @@ h2 {
         font-size: 20px;
     }
 }
+
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container1 {
+    padding: 15px;
+  }
+
+  .container1 h1 {
+    font-size: 1.75rem;
+  }
+
+  .container1 h1::after {
+    width: 50px;
+  }
+
+  .container1 h1:hover::after {
+    width: 80px;
+  }
+
+  .container1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .container1 p {
+    font-size: 0.95rem;
+  }
+
+  .container1 .about-intro {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+
