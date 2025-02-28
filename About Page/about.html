@@ -63,6 +63,38 @@
             color: #00fff2;
             /* Yellow headings */
         }
+
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 15px;
+            }
+        }
+
+        /* Image Styling */
+        .about-image {
+            width: 500px;
+            /* Fixed width */
+            height: 500px;
+            /* Fixed height */
+            border-radius: 20px;
+            /* Rounded corners */
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            /* Smooth hover effect */
+            box-shadow: 0px 4px 10px rgba(255, 111, 0, 0.5);
+            /* Soft orange shadow */
+        }
+
+        /* Hover Effect */
+        .about-image:hover {
+            transform: scale(1.1) rotate(360deg);
+            /* Slight enlargement & rotation */
+            box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.7);
+            /* Brighter glow on hover */
+            opacity: 0.9;
+            /* Slight fade effect */
+        }
     </style>
 </head>
 
@@ -106,8 +138,8 @@
                             <a class="nav-link click-scroll" href="index.html">Home</a>
                         </li>
 
-                          <li class="nav-item">
-                            <a class="nav-link click-scroll" href="Schedule Page/schedule.html">Schedule</a>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="About Page/about.html">About</a>
                         </li>
 
                         <li class="nav-item">
@@ -137,40 +169,8 @@
                 </div>
             </div>
         </nav>
+      
     </main>
-
-         <div class="container1">
-            <h1>About Us</h1>
-            <p class="about-intro">Incognito is the annual inter-collegiate IT Fest organised by The Department of
-                Computer Science and Post Graduate Department of Computer Applications at Seshadripuram College.</p>
-            <br>
-
-            <h2>Seshadripuram College</h2>
-            <p>Established in 1973 under the banner of the prestigious Seshadripuram Educational Trust, Seshadripuram
-                College regularly features among the top Commerce Colleges in the Country and has secured the grade
-                'A++' in the NAAC accreditation, with more than 3000 UG and PG students. The college attempts to create
-                a harmonious teaching and learning environment that equips students with the knowledge and skills
-                required to face the demands of the globalized environment without sacrificing the core values of our
-                culture rooted in righteousness. It attempts to live up to its stated mission of nurturing students who
-                are intellectually alive, morally upright and socially responsible.</p>
-            <br>
-
-            <h2>Masters of Computer Applications</h2>
-            <p>Seshadripuram College, Bengaluru, offers an MCA course affiliated to Bengaluru City University under
-                AICTE regulations in 2024. The Master of Computer Applications (MCA) is a two-year programme designed
-                for students to flexibly adopt, consistently adhere to principles, effectively apply their skills, and
-                strive for a harmonious balance and excellence in their careers. Through this empowerment, they are
-                enabled to contribute significant value to both industry and society.</p>
-            <br>
-
-            <h2>Bachelor of Computer Applications</h2>
-            <p>The BCA Course commenced in our college in the year 2013 with a sanctioned intake of 30 students per
-                batch. In 9 years, it has grown to two sections per batch with a sanctioned intake of 180 students. We
-                have an active placement cell which has placed 1/3rd of the first outgoing batch into reputed companies
-                like Wipro, Infosys, and TCS etc. The Department of Computer Science also offers various advanced Add-on
-                courses which equip students to face current industry requirements.</p>
-            <br>
-        </div> 
 
     <!-- Footer Section-->
     <footer>
