@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
@@ -9,12 +6,10 @@
   --primary-color: #F8CB2E;
   --secondary-color: #EE5007;
   --section-bg-color: #f0f8ff;
-  --section-bg1-color: #121212;
   --custom-btn-bg-color: #EE5007;
   --custom-btn-bg-hover-color: #c01f27;
   --dark-color: #000000;
   --p-color: #717275;
-  --p1-color: #d1d1d1;
   --border-color: #7fffd4;
   --link-hover-color: #B22727;
 
@@ -39,24 +34,15 @@
   --font-weight-bold: 700;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
+  background-color: var(--white-color);
   font-family: var(--body-font-family);
-  background: var(--p1-color);
-  min-height: 100vh;
-
 }
 
 
 /*---------------------------------------
-    TYPOGRAPHY               
-  -----------------------------------------*/
+  TYPOGRAPHY               
+-----------------------------------------*/
 
 h2,
 h3,
@@ -132,6 +118,59 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.link-fx-1 {
+  color: var(--white-color);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 6px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.link-fx-1:hover {
+  color: var(--link-hover-color);
+}
+
+.link-fx-1:hover::before {
+  transform: translateX(17px) scaleX(0);
+  transition: transform .2s;
+}
+
+.link-fx-1:hover .icon circle {
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset .2s .1s;
+}
+
+.link-fx-1:hover .icon line {
+  transform: rotate(-180deg);
+}
+
+.link-fx-1:hover .icon line:last-child {
+  transform: rotate(180deg);
+}
+
+.link-fx-1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: right center;
+  transition: transform .2s .1s;
+}
+
+.link-fx-1 .icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%) rotate(90deg);
+  font-size: 32px;
+}
 
 .icon {
   --size: 1em;
@@ -145,18 +184,105 @@ strong {
   max-width: initial;
 }
 
+.link-fx-1 .icon circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset .2s;
+}
+
+.link-fx-1 .icon line {
+  transition: transform .4s;
+  transform-origin: 13px 15px;
+}
+
+.link-fx-1 .icon line:last-child {
+  transform-origin: 19px 15px;
+}
+
 
 /*---------------------------------------
-    CUSTOM ICON COLOR               
-  -----------------------------------------*/
+  NAVIGATION BAR & SECTION               
+-----------------------------------------*/
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-bg {
+  background-color: var(--section-bg-color);
+}
+
+.section-overlay {
+  background-color: var(--dark-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+.section-overlay+.container {
+  position: relative;
+}
+
+.tab-content {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 45px;
+}
+
+.nav-tabs {
+  background-color: var(--section-bg-color);
+  border-radius: var(--border-radius-large);
+  border-bottom: 0;
+  padding: 15px;
+}
+
+.nav-tabs .nav-link {
+  border-radius: var(--border-radius-large);
+  border: 0;
+  padding: 15px 25px;
+  transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:first-child {
+  margin-right: 15px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  background: var(--white-color);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  color: var(--primary-color);
+}
+
+.nav-tabs h5 {
+  color: var(--p-color);
+  margin-bottom: 0;
+}
+
+.nav-tabs .nav-link.active h5,
+.nav-tabs .nav-link:focus h5,
+.nav-tabs .nav-link:hover h5 {
+  color: var(--primary-color);
+}
+
+
+/*---------------------------------------
+  CUSTOM ICON COLOR               
+-----------------------------------------*/
 .custom-icon {
   color: var(--secondary-color);
 }
 
 
 /*---------------------------------------
-    CUSTOM BUTTON               
-  -----------------------------------------*/
+  CUSTOM BUTTON               
+-----------------------------------------*/
 .custom-btn {
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
@@ -193,10 +319,9 @@ strong {
 }
 
 
-
 /*---------------------------------------
-    SITE HEADER              
-  -----------------------------------------*/
+  SITE HEADER              
+-----------------------------------------*/
 .site-header {
   background-color: var(--primary-color);
   padding-top: 12px;
@@ -205,8 +330,8 @@ strong {
 
 
 /*---------------------------------------
-    NAVIGATION              
-  -----------------------------------------*/
+  NAVIGATION              
+-----------------------------------------*/
 .sticky-wrapper {
   position: absolute;
   top: 0;
@@ -318,6 +443,62 @@ strong {
   top: 8px;
 }
 
+
+
+/*---------------------------------------
+  SOCIAL ICON               
+-----------------------------------------*/
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon-item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-link {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--copyright-font-size);
+  display: block;
+  margin-right: 10px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icon-link:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.social-icon-link span {
+  display: block;
+}
+
+.social-icon-link span:hover::before {
+  animation: spinAround 2s linear infinite;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------------------------------------
+  CARD         
+-----------------------------------------*/
 
 .wrapper {
   background-color: #223243;
@@ -448,7 +629,6 @@ strong {
   color: #fff;
   font-size: 24px;
 }
-
 
 /*---------------------------------------
   FOOTER             
@@ -718,53 +898,6 @@ strong {
 
   .hero-section {
     padding-top: 150px;
-  }
-}
-
-
-/*---------------------------------------
-    RESPONSIVE STYLES               
-  -----------------------------------------*/
-@media screen and (max-width: 991px) {
-  h1 {
-    font-size: 62px;
-  }
-
-  h2 {
-    font-size: 36px;
-  }
-
-  h3 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-size: 28px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
-
-  h6 {
-    font-size: 18px;
-  }
-
-  .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .navbar {
-    background-color: var(--dark-color);
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    padding-bottom: 30px;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0;
   }
 }
 

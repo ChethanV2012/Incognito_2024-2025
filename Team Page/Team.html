@@ -2,98 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport settings -->
 
-    <!-- Defines meta information for better SEO and accessibility -->
-    <meta name="description" content="Incognito 2024-2025 - Inter-College IT Fest">
-    <meta name="author" content="Incognito Web Design Team">
+    <meta name="description" content=""> <!-- Meta description for SEO -->
+    <meta name="author" content=""> <!-- Author of the document -->
 
-    <title>Incognito24-2025</title>
+    <title>Incognito 2024-2025</title>
+    <link rel="icon" type="image/x-icon" href="/images/incognito logo.png">
 
-    <!-- Preconnect to Google Fonts to optimize loading -->
+    <!-- CSS FILES -->
+    <!-- Preconnect to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
-    <!-- Link to FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Load custom fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&family=Rajdhani:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
 
     <!-- Link to external CSS files with relative paths -->
-    <link href="CSS/bootstrap-icons.css" rel="stylesheet">
+    <link href="/CSS/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
 
-    <link href="Team.css" rel="stylesheet">
+    <link href="/Team Page/Team.css" rel="stylesheet">
+
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Example: Style the navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            /* Make sure the brand is white */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            /* White links */
+            margin: 0 15px;
+            /* Add some spacing between links */
+        }
+
+        h2,
+        h3 {
+            color: #00fff2;
+            /* Yellow headings */
+        }
 
 
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 15px;
+            }
+        }
+
+        /* Image Styling */
+        .about-image {
+            width: 500px;
+            /* Fixed width */
+            height: 500px;
+            /* Fixed height */
+            border-radius: 20px;
+            /* Rounded corners */
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            /* Smooth hover effect */
+            box-shadow: 0px 4px 10px rgba(255, 111, 0, 0.5);
+            /* Soft orange shadow */
+        }
+
+        /* Hover Effect */
+        .about-image:hover {
+            transform: scale(1.1) rotate(360deg);
+            /* Slight enlargement & rotation */
+            box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.7);
+            /* Brighter glow on hover */
+            opacity: 0.9;
+            /* Slight fade effect */
+        }
+    </style>
 </head>
 
 <body>
-
     <main>
-
+        <!-- Header Section -->
         <header class="site-header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
-
-                            <!-- Icon for user and welcome text -->
                             <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Welcome to Incognito 24-2025</strong>
+                            <strong class="text-dark">Welcome to Incognito 2024-2025</strong>
                         </p>
                     </div>
+
                 </div>
             </div>
         </header>
 
-        <!-- Navigation bar -->
+        <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="../images/incognito logo.png" alt="Incognito logo" width="70">
+                </a>
 
-                <!-- Branding for the event -->
-                <a class="navbar-brand">Festava Live</a>
+                <!-- Register button for mobile -->
+                <a href="Register Page/Register.html" class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
 
-                <a href="C:\colleg\Incognito _main\Register Page\Register.html"
-                    class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
-
-                <!-- Mobile menu toggle button -->
+                <!-- Navbar toggle button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Navigation menu items -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                        <li class="nav-item"> <a class="nav-link click-scroll" href="#section_1">Home</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/index.html">Home</a>
+                        </li>
 
-                        <li class="nav-item"> <a class="nav-link click-scroll" href="#section_2">About</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/About Page/about.html">About</a>
+                        </li>
 
-                        <li class="nav-item"> <a class="nav-link click-scroll" href="#section_3">Events</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/Events Page/event.html">Events</a>
+                        </li>
 
-                        <li class="nav-item"> <a class="nav-link click-scroll" href="#section_4">Schedule</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/Schedule Page/schedule.html">Schedule</a>
+                        </li>
 
-                        <li class="nav-item"> <a class="nav-link click-scroll" href="#section_5">Broucher</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/Broucher Page/Broucher.html">Broucher</a>
+                        </li>
 
-                        <li class="nav-item"> <a class="nav-link click-scroll"
-                                href="C:\colleg\Incognito _main\Team.html">Team</a> </li>
-
-                        <li class="nav-item"> <a class="nav-link click-scroll" href="#section_7">Gallery</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/Gallery Page/gallery.html">Gallery</a>
+                        </li>
                     </ul>
 
-                    <a href="C:\colleg\Incognito _main\Register Page\Register.html"
-                        class="btn custom-btn d-lg-block d-none">Register</a>
+                    <!-- Register button for desktop -->
+                    <a href="/Registrations/register.html" class="btn custom-btn d-lg-block d-none">Register</a>
                 </div>
             </div>
         </nav>
@@ -110,16 +176,20 @@
                     <div class="imbBx"> <img src="./image/pic01.jpg" alt=""> </div>
                     <div class="content">
                         <div class="contentBx">
-                            <h3>Chethan V <br><span>Back-End Web Developer</span></h3>
+                            <h3>Chethan V <br><span>Front-End Web Developer</span></h3>
                         </div>
 
                         <!-- Social media links -->
                         <ul class="sci">
-                            <li style="--i: 1"> <a href="#"><i class="fa-brands fa-instagram"></i></a> </li>
+                            <li style="--i: 1"> <a
+                                    href="https://www.instagram.com/chethanv2012?igsh=MW95ZG42ZnkxdmxraQ=="
+                                    target="_blank"><i class="fa-brands fa-instagram"></i></a> </li>
 
-                            <li style="--i: 2"> <a href="#"><i class="fa-brands fa-github"></i></a> </li>
+                            <li style="--i: 2"> <a href="https://github.com/ChethanV2012" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a> </li>
 
-                            <li style="--i: 3"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> </li>
+                            <li style="--i: 3"> <a href="https://www.linkedin.com/in/chethan-v-" target="_blank"><i
+                                        class="fa-brands fa-linkedin-in"></i></a> </li>
                         </ul>
                     </div>
                 </div>
@@ -131,11 +201,16 @@
                             <h3>Mohan J <br><span>UI/UX Designer</span></h3>
                         </div>
                         <ul class="sci">
-                            <li style="--i: 1"> <a href="#"><i class="fa-brands fa-instagram"></i></a> </li>
+                            <li style="--i: 1"> <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
 
-                            <li style="--i: 2"> <a href="#"><i class="fa-brands fa-github"></i></a> </li>
+                            <li style="--i: 2"> <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </li>
 
-                            <li style="--i: 3"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> </li>
+                            <li style="--i: 3"> <a
+                                    href="https://www.linkedin.com/in/mohan-j-775399258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -144,14 +219,18 @@
                     <div class="imbBx"> <img src="./image/pic03.jpg" alt=""> </div>
                     <div class="content">
                         <div class="contentBx">
-                            <h3>Tanuja S <br><span>Front-End Web Developer</span></h3>
+                            <h3>Manasa J<br><span>Back-End Web Developer</span></h3>
                         </div>
                         <ul class="sci">
-                            <li style="--i: 1"> <a href="#"><i class="fa-brands fa-instagram"></i></a> </li>
+                            <li style="--i: 1"> <a href="https://www.instagram.com/manasa.j_?igsh=ZGd6amZpNTh5ZW5s"
+                                    target="_blank"><i class="fa-brands fa-instagram"></i></a> </li>
 
-                            <li style="--i: 2"> <a href="#"><i class="fa-brands fa-github"></i></a> </li>
+                            <li style="--i: 2"> <a href="https://github.com/Manasa4243" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a> </li>
 
-                            <li style="--i: 3"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> </li>
+                            <li style="--i: 3"> <a
+                                    href="https://www.linkedin.com/in/manasa-j-03b633238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> </li>
                         </ul>
                     </div>
                 </div>
@@ -160,6 +239,9 @@
             </div>
 
         </div>
+
+
+
     </main>
 
     <!-- Footer Section-->
@@ -170,9 +252,9 @@
                     <div class="footer-main">
                         <div class="footer-brand-main">
                             <div class="footer-brand">
-                                <a href="index"><img
-                                        src="C:\colleg\Incognito _main\images\Seshadripuram college logo.png"
-                                        alt="seshadripuram logo." aria-label="footer-logo" loading="lazy"></a>
+                                <a href="https://www.spmcollege.ac.in/" target="_blank"><img
+                                        src="/images/Seshadripuram college logo.png" target="_blank"
+                                        alt="seshadripuram logo" aria-label="footer-logo" loading="lazy"></a>
                                 <div>
                                     <h2>Seshadripuram College</h2>
                                     <p>Seshadripuram, Bengaluru</p>
@@ -187,11 +269,11 @@
                             <hr>
                             <div class="footer-link-all">
                                 <ul>
-                                    <li><a href="iqac">About</a></li>
-                                    <li><a href="admission-procedure">Events</a></li>
-                                    <li><a href="curriculum">Schedule</a></li>
-                                    <li><a href="photo-gallery-main">Photo Gallery</a></li>
-                                    <li><a href="latest-news-main">Broucher</a></li>
+                                    <li><a href="/About Page/about.html">About</a></li>
+                                    <li><a href="/Events Page/event.html">Events</a></li>
+                                    <li><a href="/Schedule Page/schedule.html">Schedule</a></li>
+                                    <li><a href="/Gallery Page/gallery.html">Photo Gallery</a></li>
+                                    <li><a href="/Broucher Page/Broucher.html">Broucher</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -218,8 +300,7 @@
         <div class="copy-wrapper">
             <div class="container">
                 <div class="copyrights">
-                    <span>Website Designed & Developed by : <a href="C:\colleg\Incognito _main\Team Page\Team.html"
-                            target="_blank">
+                    <span>Website Designed & Developed by : <a href="/Team Page/Team.html" target="_blank">
                             Team</a></span><br><br>
                     <p>Copyright © <span id="current-year">2025</span>, All Rights Reserved</p>
                 </div>
@@ -228,11 +309,11 @@
     </footer>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="C:\colleg\Incognito _main\js\bootstrap.min.js"></script>
-    <script src="C:\colleg\Incognito _main\js\click-scroll.js"></script>
-    <script src="C:\colleg\Incognito _main\js\jquery.min.js"></script>
-    <script src="C:\colleg\Incognito _main\js\jquery.sticky.js"></script>
-    <script src="C:\colleg\Incognito _main\js\custom.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 
