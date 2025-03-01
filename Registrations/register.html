@@ -8,11 +8,20 @@
     <link rel="icon" type="image/x-icon" href="images/incognito logo.png">
 
     <link rel="stylesheet" href="register.css">
+
+    <script>
+        function navigateTo() {
+            window.location.href = '../index.html';
+        }
+    </script>
 </head>
 
 <body>
     <!-- Home Button on Top Right -->
-    <div class="top-nav"> <a href="index.html" class="home-btn">Home</a> </div>
+    <div class="top-nav">
+        <a href="javascript:navigateTo()" class="home-btn">Home</a>
+    </div>
+
 
     <div class="container">
         <form class="form" id="registerForm">
