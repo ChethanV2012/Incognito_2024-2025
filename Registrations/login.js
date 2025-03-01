@@ -28,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     // Example validation for credentials
     if (email === "admin@example.com" && password === "password123") {
         alert("Login successful!");
-        window.location.href = "../Admin_Dashboard/Admin.html"; // Redirect to the dashboard page
+        window.location.href = "/Registrations/adminpage.html"; // Redirect to the dashboard page
     } else {
         alert("Invalid Email Id or Password.");
     }
