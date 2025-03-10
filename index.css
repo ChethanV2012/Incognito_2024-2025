@@ -324,18 +324,37 @@ strong {
 -----------------------------------------*/
 .video-wrap {
   z-index: -100;
-  
+
 }
 
 .custom-video {
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: calc(100vh - 40px);
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: black;
 }
 
+video {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  object-fit: cover; 
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  video {
+      width: 100%;
+      height: auto; /* Adjusts height automatically */
+      object-fit: contain; /* Ensures no cropping */
+  }
+}
 
 /*---------------------------------------
   SITE HEADER              
@@ -365,6 +384,8 @@ strong {
 .navbar {
   background: transparent;
   z-index: 9;
+  width: 100%;
+  height: 60px;
 }
 
 .navbar-brand,
@@ -468,13 +489,26 @@ strong {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding-top: 100px;
-  height: calc(100vh - 51px);
+  height: calc(100vh - 60px); /* Adjust height based on navbar */
+  margin-top: 20px; /* Push content below navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  text-align: center;
+  padding-top: 20px; /* Space after navbar */
 }
 
 .hero-section small {
   color: var(--white-color);
   text-transform: uppercase;
+  display: block; /* Ensure proper block positioning */
+  margin-bottom: 5px; /* Adjust spacing */
+}
+
+.hero-section h1 {
+  color: white;
+  margin-bottom: 20px; /* Ensure spacing below */
 }
 
 .hero-section .section-overlay {
@@ -486,11 +520,14 @@ strong {
   position: relative;
   z-index: 2;
   height: 100%;
-  padding-bottom: 50px;
 }
 
 .hero-section .container .row {
-  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 
