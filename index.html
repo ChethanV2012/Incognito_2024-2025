@@ -287,12 +287,40 @@
         <section class="hero-section" id="section_1">
             <div class="section-overlay"></div>
             <div class="video-wrap">
-                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                <video id="myVideo" autoplay loop muted playsinline>
                     <source src="video\Welcome.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <button id="soundButton" class="sound-btn">🔇</button>
             </div>
         </section>
+
+        <script>
+            const video = document.getElementById("myVideo");
+            const soundButton = document.getElementById("soundButton");
+
+            // Ensure sound plays when user interacts
+            function enableSound() {
+                video.muted = false;
+                video.play();
+                soundButton.textContent = "🔊"; // Change icon to sound ON
+                document.removeEventListener("click", enableSound);
+            }
+
+            // Attach event listener to any click to start sound
+            document.addEventListener("click", enableSound);
+
+            // Toggle sound button manually
+            soundButton.addEventListener("click", () => {
+                if (video.muted) {
+                    video.muted = false;
+                    soundButton.textContent = "🔊"; // Change icon to sound ON
+                } else {
+                    video.muted = true;
+                    soundButton.textContent = "🔇"; // Change icon to sound OFF
+                }
+            });
+        </script>
 
         <div class="at">
             <div class="container d-flex justify-content-center align-items-center">
