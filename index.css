@@ -344,15 +344,17 @@ strong {
 video {
   width: 100vw;
   height: calc(100vh - 60px);
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
   video {
-      width: 100%;
-      height: 100vh; /* Adjusts height automatically */
-      object-fit: contain; /* Ensures no cropping */
+    width: 100%;
+    height: 100vh;
+    /* Adjusts height automatically */
+    object-fit: contain;
+    /* Ensures no cropping */
   }
 }
 
@@ -489,26 +491,30 @@ video {
 .hero-section {
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 60px); /* Adjust height based on navbar */
-  margin-top: 20px; /* Push content below navbar */
+  height: calc(100vh - 60px);
+  /* Adjust height based on navbar */
+  margin-top: 20px;
+  /* Push content below navbar */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Align content to the top */
+  justify-content: flex-start;
+  /* Align content to the top */
   text-align: center;
-  padding-top: 20px; /* Space after navbar */
+
 }
 
-.hero-section small {
+.row small {
   color: var(--white-color);
   text-transform: uppercase;
-  display: block; /* Ensure proper block positioning */
-  margin-bottom: 5px; /* Adjust spacing */
+  padding-bottom: 20px;
 }
 
-.hero-section h1 {
+
+.row h1 {
   color: white;
-  margin-bottom: 20px; /* Ensure spacing below */
+  margin-bottom: 20px;
+  /* Ensure spacing below */
 }
 
 .hero-section .section-overlay {
@@ -530,6 +536,19 @@ video {
   justify-content: flex-start;
 }
 
+.align {
+  margin-top: 70px;
+}
+
+.at {
+  margin-top: 20px;
+  padding-top: 20px;
+  background: #AA076B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
 
 /*---------------------------------------
   ABOUT              
