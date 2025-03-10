@@ -299,27 +299,34 @@
             const video = document.getElementById("myVideo");
             const soundButton = document.getElementById("soundButton");
 
-            // Ensure sound plays when user interacts
+            let isUserInteracted = false; // Track user interaction
+
             function enableSound() {
-                video.muted = false;
-                video.play();
-                soundButton.textContent = "🔊"; // Change icon to sound ON
-                document.removeEventListener("click", enableSound);
+                if (!isUserInteracted) {
+                    video.muted = false;
+                    video.play();
+                    soundButton.textContent = "🔊"; // Change icon to sound ON
+                    isUserInteracted = true; // Mark user interaction
+                    document.removeEventListener("click", enableSound); // Remove event listener after first interaction
+                }
             }
 
-            // Attach event listener to any click to start sound
+            // First interaction unmutes video
             document.addEventListener("click", enableSound);
 
-            // Toggle sound button manually
-            soundButton.addEventListener("click", () => {
+            // Sound Toggle Button (Now Works Properly)
+            soundButton.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent conflict with document click event
+
                 if (video.muted) {
                     video.muted = false;
-                    soundButton.textContent = "🔊"; // Change icon to sound ON
+                    soundButton.textContent = "🔊"; // Sound ON
                 } else {
                     video.muted = true;
-                    soundButton.textContent = "🔇"; // Change icon to sound OFF
+                    soundButton.textContent = "🔇"; // Sound OFF
                 }
             });
+d
         </script>
 
         <div class="autoblur">
