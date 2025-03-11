@@ -26,7 +26,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     if (!isValid) return;
 
     // Example validation for credentials
-    if (email === "admin@example.com" && password === "password123") {
+    if (email === "SDC2024incognito@fest.com" && password === "Incognito2025") {
         alert("Login successful!");
         window.location.href = "/Registrations/adminpage.html"; // Redirect to the dashboard page
     } else {
