@@ -366,16 +366,23 @@ video {
 
 /* Mobile View */
 @media (max-width: 768px) {
-    .custom-video {
-      width: 100%;
-      height: auto; /* Auto height for better scaling */
-      margin-top: 60px; /* Push below navbar */
-    }
-  
-    video {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+  .custom-video {
+    width: 100%;
+    height: auto;
+    /* Auto height for better scaling */
+    margin-top: 60px;
+    /* Push below navbar */
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sound-btn {
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -567,7 +574,7 @@ video {
   background: linear-gradient(to right, #61045F, #AA076B);
 }
 
-.autoblur{
+.autoblur {
   animation: autoBlurAnimation linear both;
   animation-timeline: view();
 }
