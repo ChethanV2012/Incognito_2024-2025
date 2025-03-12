@@ -41,121 +41,6 @@
             color: #fff;
         }
 
-        /* Countdown Styles */
-        #countdown {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 30px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            margin-top: 20px;
-        }
-
-        #countdown span {
-            padding: 0 10px;
-            font-weight: bolder;
-        }
-
-        /* Gallery Styles */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            /* Increased min width */
-            gap: 20px;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gallery-item img {
-            width: 1000%;
-            height: 200px;
-            /* Set a fixed height for images */
-            object-fit: cover;
-            /* Maintain aspect ratio and cover the area */
-            display: block;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            border-radius: 15px;
-            /* Curved image corners */
-        }
-
-        /* Hover Effects */
-        .gallery-item img:hover {
-            transform: scale(1.2);
-            opacity: 0.8;
-        }
-
-        .gallery-item img {
-            height: 300px;
-            /* Adjust the height as needed */
-            width: 100;
-            /* Maintain aspect ratio */
-            object-fit: cover;
-            /* Ensure images don't get stretched */
-        }
-
-        #gallery-section {
-            padding: 0px 0;
-            /* Reduce top and bottom padding */
-        }
-
-        .gallery-item {
-            margin: 0;
-            /* Remove extra margins */
-            padding: 0;
-            /* Remove padding */
-        }
-
-
-        /* Additional Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Apply Fade-In Animation */
-        .gallery-item {
-            animation: fadeIn 1s ease-in-out;
-            transition: transform 0.5s ease-in-out;
-            /* Smooth transition for rotation */
-        }
-
-        /* Hero Section Styling */
-        .hero-section {
-            /* Example: Adjust padding, background, etc. */
-            padding: 100px 0;
-            /* Add some vertical padding */
-        }
-
-        .hero-section h1 {
-            font-size: 3rem;
-            /* Example: make the heading larger */
-        }
-
-        /* About Section Styling */
-        .about-section {
-            background-color: #000;
-            /* Example: Dark background */
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        .about-section h2,
-        .about-section h3 {
-            color: #ffcc00;
-            /* Example: Yellow headings */
-        }
-
-        .about-section p {
-            line-height: 1.6;
-        }
-
         /* Example: Style the navbar */
         .navbar {
             background-color: rgba(0, 0, 0, 0.7);
@@ -174,43 +59,6 @@
             /* Add some spacing between links */
         }
 
-        h2,
-        h3 {
-            color: #00fff2;
-            /* Yellow headings */
-        }
-
-
-        /* Responsive Footer */
-        @media (max-width: 768px) {
-            #countdown {
-                font-size: 14px;
-            }
-        }
-
-        /* Image Styling */
-        .about-image {
-            width: 500px;
-            /* Fixed width */
-            height: 500px;
-            /* Fixed height */
-            border-radius: 20px;
-            /* Rounded corners */
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-            /* Smooth hover effect */
-            box-shadow: 0px 4px 10px rgba(255, 111, 0, 0.5);
-            /* Soft orange shadow */
-        }
-
-        /* Hover Effect */
-        .about-image:hover {
-            transform: scale(1.1) rotate(360deg);
-            /* Slight enlargement & rotation */
-            box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.7);
-            /* Brighter glow on hover */
-            opacity: 0.9;
-            /* Slight fade effect */
-        }
     </style>
 </head>
 
@@ -254,10 +102,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="/About Page/about.html">About</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link click-scroll" href="/Events Page/event.html">Events</a>
                         </li>
 
@@ -271,6 +115,10 @@
 
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="/Team Page/Team.html">Team</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/Gallery Page/gallery.html">Gallery</a>
                         </li>
                     </ul>
 
@@ -322,8 +170,8 @@
                     <div class="footer-main">
                         <div class="footer-brand-main">
                             <div class="footer-brand">
-                                <a href="https://www.spmcollege.ac.in/"> <img
-                                        src="images/Seshadripuram college logo.png" target="_blank"
+                                <a href="https://www.spmcollege.ac.in/" target="_blank"> 
+                                    <img src="/images/Seshadripuram college logo.png" target="_blank"
                                         alt="seshadripuram logo" aria-label="footer-logo" loading="lazy"></a>
                                 <div>
                                     <h2>Seshadripuram College</h2>
@@ -339,11 +187,11 @@
                             <hr>
                             <div class="footer-link-all">
                                 <ul>
-                                    <li><a href="About Page/about.html">About</a></li>
-                                    <li><a href="Events Page/event.html">Events</a></li>
-                                    <li><a href="Schedule Page/schedule.html">Schedule</a></li>
-                                    <li><a href="Gallery Page/Gallery.html">Photo Gallery</a></li>
-                                    <li><a href="Broucher Page/Broucher.html">Broucher</a></li>
+                                    <li><a href="/About Page/about.html">About</a></li>
+                                    <li><a href="/Events Page/event.html">Events</a></li>
+                                    <li><a href="/Schedule Page/schedule.html">Schedule</a></li>
+                                    <li><a href="/Gallery Page/gallery.html">Photo Gallery</a></li>
+                                    <li><a href="/Broucher Page/Broucher.html">Broucher</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -372,7 +220,7 @@
         <div class="copy-wrapper">
             <div class="container">
                 <div class="copyrights">
-                    <span>Website Designed & Developed by : <a href="Team Page/Team.html" target="_blank">
+                    <span>Website Designed & Developed by : <a href="/Team Page/Team.html" target="_blank">
                             Team</a></span><br><br>
                     <p>Copyright © <span id="current-year">2025</span>, All Rights Reserved</p>
                 </div>

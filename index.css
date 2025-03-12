@@ -351,18 +351,42 @@ video {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .sound-btn:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.8);
 }
+
+.sound-btn i {
+  font-size: 24px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sound-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 250px;
+    right: 15px;
+  }
+
+  .sound-btn i {
+    font-size: 20px;
+  }
+}
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -380,13 +404,9 @@ video {
     object-fit: contain;
   }
 
-  .sound-btn {
-    bottom: 10px;
-    right: 10px;
-  }
-
   .at{
-    margin-top: 100px;
+    padding: 50px;
+    margin-top: 50px;
   }
 }
 
@@ -569,7 +589,7 @@ video {
 }
 
 .at {
-  margin-top: 300px;
+  margin-top: 200px;
   padding-top: 20px;
   background: #AA076B;
   /* fallback for old browsers */
