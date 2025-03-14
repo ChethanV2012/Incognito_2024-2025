@@ -205,7 +205,7 @@ strong {
 -----------------------------------------*/
 .section-padding {
   padding-top: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .section-bg {
@@ -385,6 +385,9 @@ video {
   .sound-btn i {
     font-size: 20px;
   }
+.section-padding{
+  padding: 5px;
+}
 }
 
 
