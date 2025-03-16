@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Event Page</title>
-  <link rel="stylesheet" href="/Events Page/event.css">
-</head>
-<body>
-  <h1>Events</h1>
-  <div class="buttons">
-    <button onclick="showEvents('technical')">Technical Event</button>
-    <button onclick="showEvents('non-technical')">Non-Technical Event</button>
-    <button onclick="showEvents('gaming')">Gaming</button>
-  </div>
-<div class="technical" id="technical"></div>
-  <div class="event-container" id="event-container">
-    <!-- Event cards will be dynamically inserted here -->
-  </div>
 
-  <script src="/Events Page/event.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incognito 2024-25</title>
+    <link rel="icon" type="image/x-icon" href="/images/incognito logo.png">
+    <link rel="stylesheet" href="/Events Page/event.css">
+
+    <script>
+        function navigateTo() {
+            window.location.href = '/index.html';
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Home Button on Top Right -->
+    <div class="top-nav">
+        <a href="javascript:navigateTo()" class="home-btn">Home</a>
+    </div>
+
+    <h1>Events</h1>
+    <div class="buttons">
+        <button onclick="showEvents('technical')">Technical Event</button>
+        <button onclick="showEvents('non-technical')">Non-Technical Event</button>
+        <button onclick="showEvents('gaming')">Gaming</button>
+    </div>
+    <div class="technical" id="technical"></div>
+    <div class="event-container" id="event-container">
+        <!-- Event cards will be dynamically inserted here -->
+    </div>
+
+    <script src="/Events Page/event.js"></script>
 </body>
+
 </html>
