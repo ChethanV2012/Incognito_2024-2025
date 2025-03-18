@@ -81,8 +81,8 @@ h1 {
 }
 
 .event-card {
-  width: 355px;
-  height: 355px;
+  width: 510px;
+  height: 500px;
   perspective: 1000px;
   cursor: pointer;
   border-radius: 15px;
@@ -193,7 +193,7 @@ h1 {
 }
 
 .event-card p {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   color: white;
   line-height: 1.4;
@@ -225,7 +225,7 @@ h1 {
 
   .buttons button {
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px;
   }
 
@@ -237,8 +237,8 @@ h1 {
 
   .event-card {
     width: 100%; /* 100% width for mobile */
-    max-width: 320px; /* Adjusted to ensure card fits well */
-    height: auto;
+    max-width: 360px; /* Adjusted to ensure card fits well */
+    height: 410px;
     transform: translateY(0);
     animation: none; /* Prevent animation on mobile */
   }
@@ -252,6 +252,6 @@ h1 {
   }
 
   .event-card p {
-    font-size: 8px; /* Reduced font size for smaller screens */
+    font-size: 7px; /* Reduced font size for smaller screens */
   }
 }
