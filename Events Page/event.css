@@ -82,7 +82,7 @@ h1 {
 
 .event-card {
   width: 510px;
-  height: 500px;
+  height: 480px;
   perspective: 1000px;
   cursor: pointer;
   border-radius: 15px;
@@ -237,8 +237,8 @@ h1 {
 
   .event-card {
     width: 100%; /* 100% width for mobile */
-    max-width: 360px; /* Adjusted to ensure card fits well */
-    height: 410px;
+    max-width: 370px; /* Adjusted to ensure card fits well */
+    height: 420px;
     transform: translateY(0);
     animation: none; /* Prevent animation on mobile */
   }
