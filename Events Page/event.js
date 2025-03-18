@@ -322,7 +322,7 @@ function showEvents(type) {
 function registerEvent(eventName) {
   // Add your registration logic here
   console.log(`Registering for: ${eventName}`);
-  window.location.href = "../registrations/register.html?event=" + encodeURIComponent(eventName);
+  window.location.href = "/Registrations/register.html?event=" + encodeURIComponent(eventName);
 
 }
 
