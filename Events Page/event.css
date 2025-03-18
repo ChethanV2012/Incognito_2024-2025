@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-image: url(https://i.pinimg.com/originals/1a/5d/8c/1a5d8c05200b6f1d9a56d8133b09923f.jpg);
   margin: 0;
-  padding: 100px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,6 @@ body::before {
   z-index: 0;
 }
 
-
 .top-nav {
   position: absolute;
   top: 15px;
@@ -30,7 +29,7 @@ body::before {
 
 .home-btn {
   background: gold;
-  color:black;
+  color: black;
   padding: 8px 15px;
   border-radius: 20px;
   text-decoration: none;
@@ -45,7 +44,7 @@ body::before {
 
 h1 {
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -71,32 +70,14 @@ h1 {
   box-shadow: 0 8px 15px rgba(67, 206, 162, 0.4);
 }
 
-.event-card-back .coordinators {
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-.event-card-back .faculty-coordinator {
-  text-align: left;
-  margin-bottom: 25px; /* Space between faculty and student coordinators */
-}
-
-.event-card-back .student-coordinators {
-  text-align: left;
-}
-
-.event-card-back .student-coordinator {
-  margin-bottom: 5px; /* Space between student coordinators */
-
-}
-
 .event-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  z-index:auto;
-  
+  z-index: auto;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .event-card {
@@ -123,11 +104,17 @@ h1 {
 }
 
 @keyframes slideDown {
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .event-card-inner {
@@ -142,37 +129,31 @@ h1 {
   transform: rotateY(180deg);
 }
 
-.event-card-front, .event-card-back {
+.event-card-front,
+.event-card-back {
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
   display: flex;
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 15px;
   color: #fff;
-  
 }
 
-/* Front Card - Holographic Effect */
 .event-card-front {
-  background: linear-gradient(45deg,
-    rgba(67, 206, 162, 0.9),
-    rgba(24, 90, 157, 0.9));
+  background: linear-gradient(45deg, rgba(67, 206, 162, 0.9), rgba(24, 90, 157, 0.9));
   box-shadow: 0 1px 32px rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   border: 4px solid rgba(255, 255, 255, 0.18);
 }
 
-
-/* Back Card - Animated Gradient */
 .event-card-back {
-  background: linear-gradient(-45deg, 
-    #ee7752, #7b1f7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #7b1f7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradientBG 5s ease infinite;
   transform: rotateY(180deg);
@@ -181,22 +162,24 @@ h1 {
 }
 
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .event-card img {
   max-width: 100%;
   max-height: 200px;
   transition: transform 0.5s ease;
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-.event-card:hover {
-  width: 500px;
-   /* Expand horizontally */
-}
 .event-card:hover img {
   transform: scale(-1);
 }
@@ -206,7 +189,7 @@ h1 {
   font-size: 1.4em;
   color: white;
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .event-card p {
@@ -220,7 +203,7 @@ h1 {
   padding: 10px;
   font-size: 14px;
   cursor: pointer;
-  border:#43cea2;
+  border: #43cea2;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.9);
   color: #185a9d;
@@ -231,5 +214,44 @@ h1 {
 .event-card button:hover {
   background: rgba(255, 255, 255, 1);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsive design for 375px width */
+@media (max-width: 375px) {
+  body {
+    padding: 10px; /* Reduced padding for mobile */
+  }
+
+  .buttons button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .event-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap for smaller screen */
+  }
+
+  .event-card {
+    width: 100%; /* 100% width for mobile */
+    max-width: 320px; /* Adjusted to ensure card fits well */
+    height: auto;
+    transform: translateY(0);
+    animation: none; /* Prevent animation on mobile */
+  }
+
+  .event-card img {
+    max-height: 150px; /* Ensure images scale better on mobile */
+  }
+
+  .event-card h3 {
+    font-size: 1.2em; /* Smaller text for better readability */
+  }
+
+  .event-card p {
+    font-size: 8px; /* Reduced font size for smaller screens */
+  }
 }
