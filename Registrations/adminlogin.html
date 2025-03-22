@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Incognito 2024-25</title>
+    <link rel="icon" type="image/x-icon" href="images/incognito logo.png">
+
+    <link rel="stylesheet" href="/Registrations/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Home Button on Top Right -->
+    <div class="top-nav">
+        <a href="javascript:navigateTo()" class="home-btn">Home</a>
+    </div>
+
+    <div class="content">
+        <div class="text"> Admin Login</div>
+
+        <form id="loginForm">
+            <div class="field">
+                <input type="text" id="email" required>
+                <span class="fas fa-user"></span>
+                <label>Email Id</label>
+            </div>
+
+            <div class="field">
+                <input type="password" id="password" required>
+                <span class="fas fa-lock"></span>
+                <label>Password</label>
+            </div>
+            <br>
+
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="/Registrations/adminlogin.js" defer></script>
+</body>
+
+</html>

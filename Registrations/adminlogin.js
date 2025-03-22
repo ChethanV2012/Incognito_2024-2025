@@ -1,12 +1,7 @@
-// script.js
-
 function navigateTo() {
     window.location.href = '../index.html';
 }
 
-function navigate1To() {
-    window.location.href = '/Registrations/adminlogin.html';
-}
 
 document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -30,9 +25,9 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     if (!isValid) return;
 
     // Example validation for credentials
-    if (email === "SDC2024incognito@fest.com" && password === "Incognito2025") {
+    if (email === "SDCAdminincognito@fest.com" && password === "Incognito2025") {
         alert("Login successful!");
-        window.location.href = "/Registrations/adminpage.html"; // Redirect to the dashboard page
+        window.location.href = "/Registrations/admin.html"; // Redirect to the dashboard page
     } else {
         alert("Invalid Email Id or Password.");
     }
