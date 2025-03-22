@@ -4,6 +4,10 @@ function navigateTo() {
     window.location.href = '../index.html';
 }
 
+function navigate1To() {
+    window.location.href = '/Registrations/admin.html';
+}
+
 document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
 

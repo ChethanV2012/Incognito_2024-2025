@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Registrations/admin.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+            <button id="logoutButton" class="btn btn-danger">Logout</button>
+        </div>
+
+        <div class="filters">
+            <div class="input-group">
+                <input type="text" id="searchCollege" class="form-control" placeholder="Search by College Name">
+                <button id="resetButton" class="btn btn-warning">Reset</button>
+            </div>
+
+            <select id="eventFilter" class="form-control">
+                <option value="">Select Event</option>
+                <option value="IT Quiz">IT Quiz</option>
+                <option value="Coding">Coding & Debugging</option>
+                <option value="IT Dumb Chardes">IT DumbCharades</option>
+                <option value="IT Techmaster">IT TechMaster</option>
+                <option value="Web Design">Web Development</option>
+                <option value="IOT Models">IOT Modelling</option>
+                <option value="BGMI">BGMI - Gaming</option>
+                <option value="Talent Show">Talent Show</option>
+                <option value="FreeFire">Free Fire - Gaming</option>
+                <option value="Videography">Videography</option>
+                <option value="Treasure Hunt">Treasure Hunt</option>
+            </select>
+
+            <button id="downloadButton" class="btn">Download PDF</button>
+        </div>
+
+        <div class="table-responsive">
+            <table id="registrationsTable" class="table table-dark table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Team Name</th>
+                        <th>Participant Name</th>
+                        <th>Phone Number</th>
+                        <th>Email ID</th>
+                        <th>College Name</th>
+                        <th>Event</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="registrationTableBody"></tbody>
+            </table>
+        </div>
+
+        <div id="registrationCount" class="mt-3">
+            Total Registrations: <span id="totalRegistrations">0</span>
+        </div>
+    </div>
+
+    <script src="/Registrations/admin.js" type="module"></script>
+</body>
+
+</html>
